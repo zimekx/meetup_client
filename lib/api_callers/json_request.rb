@@ -9,7 +9,7 @@ module ApiCallers
     private
 
     def clean_response_body(response_body)
-      ActionController::Base.helpers.strip_tags(response_body.gsub('\"','').force_encoding(CHARSET))
+      response_body.gsub('\"','').force_encoding(CHARSET)
     end
   end
 end
